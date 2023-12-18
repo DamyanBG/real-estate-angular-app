@@ -1,0 +1,21 @@
+<div class="main-container">
+    <article *ngFor="let home of homes" class="home-container">
+        <div class="image-container">
+            <img
+                class="all-homes-image"
+                src="{{home.photo_url}}"
+                alt="Home"
+            />
+        </div>
+        <div class="main-text">
+            <button (click)="redirectToDetails(home.id)" class="details-link">
+                <h3>{{home.title}}</h3>
+            </button>
+            <p class="main-text-par">Location: {{home.city}}</p>
+            <p>Price: {{home.price}}</p>
+        </div>
+        <div class="description-text">
+            <p class="description-text-par">{{home.description}}</p>
+        </div>
+    </article>
+</div>
